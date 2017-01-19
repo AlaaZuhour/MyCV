@@ -1,0 +1,71 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alazh.mycv.Personal">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:text="@string/perinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            tools:text="@string/perinfo"
+            tools:textColor="@color/blue"
+            tools:fontFamily="sans-serif-condensed"
+            tools:textStyle="bold" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="39dp"
+            android:id="@+id/textView5"
+            tools:text="Email: alazhore@gmail.com"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            tools:shadowColor="@color/colorAccent"
+            android:textStyle="bold"
+            tools:textSize="25sp"
+            tools:textColor="@color/purple" />
+
+        <TextView
+            android:text="Tel: 0592380417"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView5"
+            android:layout_alignLeft="@+id/textView5"
+            android:layout_alignStart="@+id/textView5"
+            android:layout_marginTop="39dp"
+            android:id="@+id/textView6"
+            tools:textColor="@color/purple"
+            tools:textSize="25sp"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="Next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/textView6"
+            android:layout_alignStart="@+id/textView6"
+            android:layout_marginBottom="55dp"
+            android:id="@+id/button2"
+            android:background="@color/blue"
+            android:textStyle="bold"
+            tools:textSize="25sp"
+            tools:textColor="@color/purple" />
+    </RelativeLayout>
+
+</FrameLayout>

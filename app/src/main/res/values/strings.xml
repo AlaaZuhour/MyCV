@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My CV</string>
+    <string name="username">Alaa Zuhouer</string>
+    <string name="password">helloAlaa</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cv">Alaa CV</string>
+    <string name="perinfo">Personal Info</string>
+
+</resources>

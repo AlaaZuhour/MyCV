@@ -1,0 +1,132 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alazh.mycv.Education">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="#FFCEDE9C">
+
+        <TextView
+            android:text="Education"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="26dp"
+            android:id="@+id/textView4"
+            tools:text="Education"
+            tools:textSize="36sp"
+            android:textStyle="bold"
+            tools:textColor="@color/green" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4"
+            android:layout_marginTop="58dp"
+            android:id="@+id/textView7"
+            tools:text="2013-present"
+            tools:textColor="@color/colorPrimary"
+            tools:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:text="Computer science"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView7"
+            android:layout_alignLeft="@+id/textView7"
+            android:layout_alignStart="@+id/textView7"
+            android:layout_marginTop="18dp"
+            android:id="@+id/textView8"
+            tools:textColor="@color/green"
+            tools:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_alignRight="@+id/textView4"
+            android:layout_alignEnd="@+id/textView4" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9"
+            tools:text="Birzeit University"
+            tools:textColor="@color/green"
+            tools:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_alignBottom="@+id/textView8"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/textView8" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView8"
+            android:layout_alignLeft="@+id/textView8"
+            android:layout_alignStart="@+id/textView8"
+            android:layout_marginTop="78dp"
+            android:id="@+id/textView10"
+            tools:text="2001 – 2013"
+            android:textStyle="bold"
+            tools:textColor="@color/colorPrimary"
+            tools:textSize="24sp" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView10"
+            android:layout_alignLeft="@+id/textView10"
+            android:layout_alignStart="@+id/textView10"
+            android:layout_marginTop="24dp"
+            android:id="@+id/textView11"
+            tools:text="Tawjeehi"
+            tools:textColor="@color/green"
+            tools:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView12"
+            tools:text="Abu-Falah Secondary School"
+            tools:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/green"
+            android:layout_below="@+id/textView10"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@+id/textView8"
+            android:layout_toEndOf="@+id/textView8" />
+
+        <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/textView11"
+            android:layout_alignStart="@+id/textView11"
+            android:layout_marginBottom="13dp"
+            tools:text="Next"
+            android:background="@color/green"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:textSize="24sp" />
+    </RelativeLayout>
+</FrameLayout>
