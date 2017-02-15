@@ -1,13 +1,17 @@
 package com.example.alazh.mycv;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
-import android.net.Uri;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class Personal extends Fragment {
@@ -18,8 +22,27 @@ public class Personal extends Fragment {
     public Personal() {
         // Required empty public constructor
     }
-    public void onClick(View v){
-        mListener.onClick(v);
+    public void onStart(){
+        super.onStart();
+        Button per=(Button) getActivity().findViewById(R.id.button2);
+        Intent data=getActivity().getIntent();
+        String phone=data.getExtras().getString("phone");
+        String name=data.getExtras().getString("name");
+        String email=data.getExtras().getString("email");
+        EditText nameF=(EditText) getActivity().findViewById(R.id.nameF);
+        nameF.setText(name);
+        TextView phoneF=(TextView) getActivity().findViewById(R.id.phoneF);
+        phoneF.setText(phone);
+        EditText emailF=(EditText) getActivity().findViewById(R.id.emailF);
+        emailF.setText(email);
+        per.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.onClickper(v);
+
+            }
+        });
+
     }
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,6 +85,6 @@ public class Personal extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onClick(View view);
+        void onClickper(View view);
     }
 }

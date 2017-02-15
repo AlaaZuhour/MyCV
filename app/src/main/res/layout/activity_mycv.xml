@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_mycv"
     android:layout_width="match_parent"
@@ -9,16 +9,29 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.alazh.mycv.MYCV">
-
     <fragment
         android:name="com.example.alazh.mycv.Personal"
         android:layout_width="0px"
         android:layout_height="match_parent"
-        android:id="@+id/personal" />
+        android:id="@+id/personal"
+        tools:layout="@layout/fragment_personal" />
     <fragment
         android:name="com.example.alazh.mycv.Education"
         android:layout_width="0px"
         android:layout_height="match_parent"
-        android:id="@+id/education"/>
+        android:id="@+id/education"
+        tools:layout="@layout/fragment_education" />
+    <fragment
+        android:name="com.example.alazh.mycv.Training"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:id="@+id/training"
+        tools:layout="@layout/fragment_training" />
+    <fragment
+        android:name="com.example.alazh.mycv.Skills"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:id="@+id/skills"
+        tools:layout="@layout/fragment_skills" />
+    </FrameLayout>
 
-</RelativeLayout>

@@ -1,4 +1,5 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,63 +10,133 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorAccent">
+        android:background="@drawable/back">
 
-        <TextView
-            android:text="@string/perinfo"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            tools:text="@string/perinfo"
-            tools:textColor="@color/blue"
-            tools:fontFamily="sans-serif-condensed"
-            tools:textStyle="bold" />
-
-        <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView3"
+            android:weightSum="1"
+            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="11dp"
-            android:layout_marginStart="11dp"
-            android:layout_marginTop="39dp"
-            android:id="@+id/textView5"
-            tools:text="Email: alazhore@gmail.com"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            tools:shadowColor="@color/colorAccent"
-            android:textStyle="bold"
-            tools:textSize="25sp"
-            tools:textColor="@color/purple" />
+            android:layout_alignParentStart="true">
 
-        <TextView
-            android:text="Tel: 0592380417"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView5"
-            android:layout_alignLeft="@+id/textView5"
-            android:layout_alignStart="@+id/textView5"
-            android:layout_marginTop="39dp"
-            android:id="@+id/textView6"
-            tools:textColor="@color/purple"
-            tools:textSize="25sp"
-            android:textStyle="normal|bold" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="143dp"
+                    android:id="@+id/imageView15"
+                    android:layout_weight="0.50"
+                    android:src="@drawable/per"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="190dp"
+                android:layout_height="49dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="40dp"
+                android:layout_weight="0.32">
+
+                <ImageView
+                    android:layout_width="67dp"
+                    android:layout_height="58dp"
+                    android:id="@+id/imageView17"
+                    android:src="@drawable/am" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/nameF"
+                    android:layout_alignTop="@+id/textView"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.27">
+
+                <ImageView
+                    android:layout_width="62dp"
+                    android:layout_height="51dp"
+                    android:id="@+id/imageView11"
+                    android:src="@drawable/emaili" />
+
+                <EditText
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:layout_alignTop="@+id/textView5"
+                    android:layout_toRightOf="@+id/textView"
+                    android:layout_toEndOf="@+id/textView"
+                    android:id="@+id/emailF"
+                    android:layout_marginLeft="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="69dp"
+                    android:layout_height="53dp"
+                    android:id="@+id/imageView10"
+                    android:layout_alignBottom="@+id/button2"
+                    android:layout_alignRight="@+id/phoneF"
+                    android:layout_alignEnd="@+id/phoneF"
+                    android:src="@drawable/phone" />
+
+                <TextView
+                    android:text="0592380417"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/phoneF"
+                    tools:textColor="@color/purple"
+                    tools:textSize="24sp"
+                    android:textStyle="normal|bold"
+                    android:textSize="24sp"
+                    android:layout_below="@+id/emailF"
+                    android:layout_alignLeft="@+id/emailF"
+                    android:layout_alignStart="@+id/emailF"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_weight="0.52"
+                    android:layout_marginTop="15dp" />
+            </LinearLayout>
+
+        </LinearLayout>
 
         <Button
             android:text="Next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/textView6"
-            android:layout_alignStart="@+id/textView6"
-            android:layout_marginBottom="55dp"
             android:id="@+id/button2"
             android:background="@color/blue"
             android:textStyle="bold"
             tools:textSize="25sp"
-            tools:textColor="@color/purple" />
+            tools:textColor="@color/purple"
+            android:onClick="onClick"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
     </RelativeLayout>
 
 </FrameLayout>
