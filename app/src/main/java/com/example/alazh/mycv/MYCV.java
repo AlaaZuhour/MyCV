@@ -12,8 +12,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
-public class MYCV extends Activity  implements Personal.OnFragmentInteractionListener , Education.OnFragmentInteractionListener
-                                         , Skills.OnFragmentInteractionListener, Training.OnFragmentInteractionListener{
+public class MYCV extends Activity  implements Personal.OnFragmentInteractionListener , Education.OnFragmentInteractionListener, Training.OnFragmentInteractionListener{
     FragmentManager fragmentmanager;
     FragmentTransaction fragmentTransaction;
 
@@ -52,26 +51,13 @@ public class MYCV extends Activity  implements Personal.OnFragmentInteractionLis
         FragmentTransaction fragmentTransaction1;
         fragmentmanager1= getFragmentManager();
         fragmentTransaction1 = fragmentmanager1.beginTransaction();
-        Skills edu = new Skills();
-
-        fragmentTransaction1.replace(android.R.id.content ,edu);
-        fragmentTransaction1.addToBackStack(null);
-        fragmentTransaction1.commit();
-    }
-
-
-
-    @Override
-    public void onClickskil(View view) {
-        FragmentManager fragmentmanager1;
-        FragmentTransaction fragmentTransaction1;
-        fragmentmanager1= getFragmentManager();
-        fragmentTransaction1 = fragmentmanager1.beginTransaction();
         Training edu = new Training();
 
         fragmentTransaction1.replace(android.R.id.content ,edu);
         fragmentTransaction1.addToBackStack(null);
         fragmentTransaction1.commit();
     }
+
+
 }
 

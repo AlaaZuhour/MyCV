@@ -30,16 +30,16 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
-                android:background="@color/colorAccent">
+                android:background="@drawable/bbb">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="66dp"
+                    android:layout_width="77dp"
+                    android:layout_height="69dp"
                     android:id="@+id/imageView3"
                     android:scaleType="fitCenter"
-                    android:layout_weight="0.33"
                     android:visibility="visible"
-                    android:src="@drawable/per_info" />
+                    android:src="@drawable/admin"
+                    android:layout_weight="0.12" />
 
                 <TextView
                     android:text="Personal Info"
@@ -47,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textView29"
                     android:layout_weight="1"
-                    android:textColor="?attr/colorControlNormal"
+                    android:textColor="@android:color/black"
                     android:textStyle="normal|bold|italic"
                     android:textSize="30sp"
                     android:layout_marginTop="13dp" />
@@ -60,17 +60,6 @@
                 tools:layout_height="wrap_content"
                 android:id="@+id/linarlayout">
 
-                <TextView
-                    android:text="Full Name:"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView16"
-                    android:layout_weight="1"
-                    tools:text="Full Name:  "
-                    tools:textColor="@android:color/black"
-                    android:textStyle="normal|bold"
-                    android:textSize="18sp" />
-
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -78,7 +67,8 @@
                     android:ems="10"
                     android:id="@+id/name"
                     android:layout_weight="1"
-                    android:textStyle="normal|bold" />
+                    android:textStyle="normal|bold"
+                    android:hint="Full Name" />
 
             </LinearLayout>
 
@@ -88,24 +78,15 @@
                 android:layout_height="wrap_content"
                 tools:layout_height="wrap_content">
 
-                <TextView
-                    android:text="Phone:"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView22"
-                    android:layout_weight="1"
-                    tools:text="Phone:"
-                    tools:textColor="@android:color/black"
-                    android:textStyle="normal|bold"
-                    android:textSize="18sp" />
-
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
                     android:id="@+id/phone"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:hint="Phone No"
+                    android:textColor="@android:color/black" />
 
             </LinearLayout>
 
@@ -114,41 +95,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:text="E-mail:"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView6"
-                    android:layout_weight="1"
-                    android:textStyle="normal|bold"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp" />
-
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
                     android:id="@+id/email"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:hint="E-mail"
+                    android:textColor="@android:color/black" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorAccent"
-                android:layout_marginTop="5dp">
+                android:layout_height="71dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bbb">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_width="86dp"
+                    android:layout_height="72dp"
                     android:id="@+id/imageView2"
-                    android:layout_weight="0.08"
                     android:visibility="visible"
-                    android:src="@drawable/edu_name" />
+                    android:src="@drawable/educat"
+                    android:layout_weight="0.03" />
 
                 <TextView
                     android:text="Eudcational"
@@ -159,17 +131,18 @@
                     android:layout_marginTop="10dp"
                     android:textSize="30sp"
                     android:textStyle="normal|bold|italic"
-                    android:layout_marginRight="1dp" />
+                    android:layout_marginRight="1dp"
+                    android:textColor="@android:color/black" />
 
                 <Button
                     android:text="+"
                     android:layout_width="45dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/eduPlus"
-                    android:layout_marginTop="7dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginRight="7dp"
                     android:onClick="onEduPlusClick"
-                    style="@style/Widget.AppCompat.Button.Borderless"
+                    style="@android:style/Widget.Button.Inset"
                     android:elevation="0dp"
                     android:textAppearance="@style/TextAppearance.AppCompat"
                     android:textStyle="normal|bold"
@@ -181,29 +154,47 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:theme="@style/AlertDialog.AppCompat.Light"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                android:weightSum="1">
 
                 <TextView
                     android:text="Education Degree"
-                    android:layout_width="127dp"
+                    android:layout_width="96dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView30"
                     android:textColor="@android:color/black"
                     android:textStyle="normal|bold"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:layout_marginBottom="5dp" />
 
                 <Spinner
                     android:layout_width="85dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/eduDeg"
-                    android:entries="@array/spinnereu"/>
+                    android:entries="@array/spinnereu"
+                    android:layout_weight="0.92" />
+
+                <EditText
+                    android:layout_width="101dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/instit"
+                    android:hint="Institution " />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <TextView
                     android:text="Year"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView31"
-                    android:layout_weight="1"
+                    android:layout_weight="0.61"
                     android:textColor="@android:color/black"
                     android:textStyle="normal|bold"
                     android:textSize="18sp" />
@@ -212,62 +203,34 @@
                     android:layout_width="79dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/year1"
-                    android:entries="@array/spinneryear"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:text="Specialty "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView34"
-                    android:textColor="@android:color/black"
-                    android:textStyle="normal|bold"
-                    android:textSize="18sp" />
+                    android:entries="@array/spinneryear"
+                    android:layout_weight="0.48" />
 
                 <EditText
                     android:layout_width="96dp"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/specialty" />
-
-                <TextView
-                    android:text="Institution "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView33"
-                    android:textColor="@android:color/black"
-                    android:textStyle="normal|bold"
-                    android:textSize="18sp" />
-
-                <EditText
-                    android:layout_width="112dp"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/instit" />
+                    android:id="@+id/specialty"
+                    android:hint="Specialty "
+                    android:layout_weight="0.24" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/colorAccent"
-                android:layout_marginTop="5dp">
+                android:layout_height="66dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bbb">
 
                 <ImageView
                     android:layout_width="62dp"
-                    android:layout_height="59dp"
+                    android:layout_height="70dp"
                     android:id="@+id/imageView6"
                     android:visibility="visible"
-                    android:src="@drawable/trian_name" />
+                    android:src="@drawable/trian_name"
+                    android:layout_weight="0.13" />
 
                 <TextView
                     android:text="Training "
@@ -275,7 +238,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/textView35"
                     android:layout_weight="0.87"
-                    android:textColor="?attr/colorControlNormal"
+                    android:textColor="@android:color/black"
                     android:textStyle="normal|bold|italic"
                     android:textSize="30sp"
                     android:layout_marginTop="10dp"
@@ -284,7 +247,7 @@
 
                 <Button
                     android:text="+"
-                    android:layout_width="48dp"
+                    android:layout_width="38dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/trainPlus"
                     android:onClick="onTrainPlusClick"
@@ -293,7 +256,8 @@
                     android:layout_marginTop="7dp"
                     android:layout_marginRight="5dp"
                     android:elevation="11dp"
-                    style="@style/Widget.AppCompat.Button.Borderless" />
+                    style="@android:style/Widget.Button.Inset"
+                    android:layout_weight="0.04" />
             </LinearLayout>
 
             <LinearLayout
@@ -301,39 +265,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:text="Topic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView38"
-                    android:layout_weight="2195.11"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-                    android:textStyle="normal|bold" />
-
                 <EditText
-                    android:layout_width="93dp"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/topic" />
-
-                <TextView
-                    android:text="Training Hours"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView36"
-                    android:layout_weight="435.12"
-                    android:textSize="18sp"
-                    android:textStyle="normal|bold"
-                    android:textColor="@android:color/black" />
+                    android:id="@+id/topic"
+                    android:hint="Topic"
+                    android:layout_width="150dp" />
 
                 <EditText
-                    android:layout_width="90dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/hours" />
+                    android:id="@+id/hours"
+                    android:hint="Training Hours" />
 
             </LinearLayout>
 
@@ -343,39 +289,21 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp">
 
-                <TextView
-                    android:text="Company"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView40"
-                    android:layout_weight="1"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-                    android:textStyle="normal|bold" />
-
                 <EditText
-                    android:layout_width="71dp"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/company" />
-
-                <TextView
-                    android:text="Duration"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView39"
-                    android:layout_weight="1"
-                    android:textColor="@android:color/black"
-                    android:textStyle="normal|bold"
-                    android:textSize="18sp" />
+                    android:id="@+id/company"
+                    android:hint="Company"
+                    android:layout_width="150dp" />
 
                 <EditText
-                    android:layout_width="79dp"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/duration" />
+                    android:id="@+id/duration"
+                    android:hint="Duration/months"
+                    android:layout_width="150dp" />
             </LinearLayout>
 
             <Button
@@ -387,7 +315,7 @@
                 tools:onClick="onClick"
                 android:onClick="onClick"
                 android:layout_alignParentBottom="true"
-                style="@style/Widget.AppCompat.Button.Small"
+                style="@android:style/Widget.Button.Inset"
                 android:gravity="center_vertical|center_horizontal|start"
                 android:layout_marginTop="18dp" />
 

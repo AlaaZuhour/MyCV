@@ -3,6 +3,7 @@
     <string-array name="spinnereu">
         <item>Tawjehi</item>
         <item>Bachlors</item>
+        <item>Doctorate</item>
     </string-array>
     <string-array name="spinneryear">
         <item>2010</item>

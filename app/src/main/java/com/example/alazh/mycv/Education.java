@@ -37,44 +37,53 @@ public class Education extends Fragment {
 
     public void onStart(){
         super.onStart();
+     Button nex=(Button) getActivity().findViewById(R.id.button3);
+        nex.setOnClickListener(new View.OnClickListener(){
 
+            @Override
+            public void onClick(View v) {
+                mListener.onClickedu(v);
+            }
+        });
     }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent i= getActivity().getIntent();
-       // Bundle args = i.getBundleExtra("BUNDLE");
-       final ArrayList<MainActivity.Edu> edu=(ArrayList<MainActivity.Edu>) i.getExtras().getSerializable("education");
-        ArrayAdapter<MainActivity.Edu> eduAdapter =
-                new ArrayAdapter<MainActivity.Edu>(getActivity(), 0, edu) {
-                    @Override
-                    public View getView(int position, View convertView, ViewGroup parent) {
-                        MainActivity.Edu currentEdu=edu.get(position);
-                        if(convertView == null) {
-                            convertView = getActivity().getLayoutInflater().inflate(R.layout.list_row, null, false);
-                            TextView ye=(TextView) getActivity().findViewById(R.id.yearE);
-                            TextView de=(TextView) getActivity().findViewById(R.id.degE);
-                            TextView spe=(TextView) getActivity().findViewById(R.id.specE);
-                            TextView ist=(TextView) getActivity().findViewById(R.id.institE);
-                            ye.setText(currentEdu.year);
-                            de.setText(currentEdu.degree);
-                            spe.setText(currentEdu.speciality);
-                            ist.setText(currentEdu.instituation);
-                        }
-                        return convertView;
-                    }
-                };
-        ListView listView=(ListView) getActivity().findViewById(R.id.list);
-        listView.setAdapter(eduAdapter);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View rootView=inflater.inflate(R.layout.fragment_education, container, false);
+        Intent i= getActivity().getIntent();
 
+        final ArrayList<MainActivity.Edu> edu= i.getExtras().getParcelableArrayList("education");
 
-       return inflater.inflate(R.layout.fragment_education, container, false);
+        ArrayAdapter<MainActivity.Edu> eduAdapter =
+                new ArrayAdapter<MainActivity.Edu>(getActivity(), 0, edu) {
+                    @Override
+                    public View getView(int position, View convertView, ViewGroup parent) {
+                        MainActivity.Edu currentEdu=edu.get(position);
+                        if(convertView == null)
+                            convertView = getActivity().getLayoutInflater().inflate(R.layout.list_row, null, false);
+                        TextView ye=(TextView) convertView.findViewById(R.id.yearE);
+                        TextView de=(TextView) convertView.findViewById(R.id.degE);
+                        TextView spe=(TextView) convertView.findViewById(R.id.specE);
+                        TextView ist=(TextView) convertView.findViewById(R.id.institE);
+                        ye.setText(currentEdu.year);
+                        de.setText(currentEdu.degree);
+                        spe.setText(currentEdu.speciality);
+                        ist.setText(currentEdu.instituation);
+
+                        return convertView;
+                    }
+                };
+        final ListView listView=(ListView) rootView.findViewById(R.id.list);
+        listView.setAdapter(eduAdapter);
+
+       return rootView;
     }
 
 
